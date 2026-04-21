@@ -20,7 +20,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-500 ${scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-card" : "bg-background border-b border-border"}`}>
+    <header className={`sticky top-0 z-50 bg-background border-b border-border transition-shadow duration-300 ${scrolled ? "shadow-card" : ""}`}>
       {/* Top bar */}
       <div className="gradient-hero text-white text-xs">
         <div className="container flex flex-wrap items-center justify-between gap-2 py-2">

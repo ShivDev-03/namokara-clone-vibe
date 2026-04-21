@@ -1,46 +1,54 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BadgeCheck, Factory, Truck } from "lucide-react";
+import { ArrowRight, BadgeCheck, Factory, Truck, Sparkles } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section id="home" className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-[hsl(var(--primary-dark))] text-primary-foreground">
-      <div className="absolute inset-0 opacity-20" style={{
-        backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-        backgroundSize: "24px 24px"
+    <section id="home" className="relative overflow-hidden gradient-hero text-white">
+      {/* Animated glow orbs */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-primary-glow/20 blur-3xl animate-float" />
+      <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full bg-accent/15 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+
+      {/* Grid pattern */}
+      <div className="absolute inset-0 opacity-[0.07]" style={{
+        backgroundImage: "linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)",
+        backgroundSize: "60px 60px",
+        maskImage: "radial-gradient(ellipse at center, black 40%, transparent 75%)",
       }} />
-      <div className="container relative py-16 md:py-24 grid lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold mb-4">
-            <BadgeCheck className="h-4 w-4" /> Verified Wholesale Trader · Since 2020
+
+      <div className="container relative py-20 md:py-28 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="animate-fade-in-up">
+          <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs font-medium mb-6 animate-scale-in">
+            <Sparkles className="h-3.5 w-3.5 text-primary-glow" /> Verified Wholesale Trader · Since 2020
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-5">
-            Industrial Encoders, Sensors & Automation Components
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
+            Industrial <span className="text-gradient">Encoders</span>, Sensors & Automation
           </h1>
-          <p className="text-base md:text-lg text-primary-foreground/85 mb-8 max-w-xl">
+          <p className="text-base md:text-lg text-white/70 mb-10 max-w-xl leading-relaxed">
             Authorized wholesale distributor of Tamagawa, Autonics, Heidenhain, Omron, Kübler, Meanwell and more — serving industries across India.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Button asChild size="lg" variant="secondary">
+            <Button asChild size="lg" className="bg-primary-glow hover:bg-primary-glow/90 text-primary-foreground shadow-glow hover:scale-105 transition-all duration-300">
               <a href="#products">Explore Products <ArrowRight className="ml-1 h-4 w-4" /></a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="bg-transparent border-white/40 text-primary-foreground hover:bg-white/10 hover:text-primary-foreground">
+            <Button asChild size="lg" variant="outline" className="bg-white/5 backdrop-blur border-white/30 text-white hover:bg-white/10 hover:text-white hover:scale-105 transition-all duration-300">
               <a href="#contact">Get a Quote</a>
             </Button>
           </div>
 
-          <div className="mt-10 grid grid-cols-3 gap-4 max-w-md">
-            <Stat value="600+" label="SKUs" />
-            <Stat value="1.5–5 Cr" label="Turnover" />
-            <Stat value="100%" label="Genuine" />
+          <div className="mt-12 grid grid-cols-3 gap-4 max-w-md">
+            <Stat value="600+" label="SKUs" delay="0.2s" />
+            <Stat value="1.5–5 Cr" label="Turnover" delay="0.35s" />
+            <Stat value="100%" label="Genuine" delay="0.5s" />
           </div>
         </div>
 
-        <div className="relative">
-          <div className="grid grid-cols-2 gap-4">
-            <Card icon={<Factory className="h-6 w-6" />} title="Trusted Brands" desc="Tamagawa · Autonics · Omron · Heidenhain" />
-            <Card icon={<Truck className="h-6 w-6" />} title="Pan-India Shipping" desc="Fast, insured delivery nationwide" />
-            <Card icon={<BadgeCheck className="h-6 w-6" />} title="GST Verified" desc="07AFDPJ4894B1ZJ" />
-            <Card icon={<ArrowRight className="h-6 w-6" />} title="Quick Quotes" desc="Reply within hours · 85% rate" />
+        <div className="relative animate-slide-in-right">
+          <div className="absolute inset-0 gradient-glow blur-2xl" />
+          <div className="relative grid grid-cols-2 gap-4">
+            <Card icon={<Factory className="h-6 w-6" />} title="Trusted Brands" desc="Tamagawa · Autonics · Omron" delay="0.1s" />
+            <Card icon={<Truck className="h-6 w-6" />} title="Pan-India Shipping" desc="Fast, insured delivery" delay="0.25s" />
+            <Card icon={<BadgeCheck className="h-6 w-6" />} title="GST Verified" desc="07AFDPJ4894B1ZJ" delay="0.4s" />
+            <Card icon={<ArrowRight className="h-6 w-6" />} title="Quick Quotes" desc="Reply within hours" delay="0.55s" />
           </div>
         </div>
       </div>
@@ -48,17 +56,22 @@ export const Hero = () => {
   );
 };
 
-const Stat = ({ value, label }: { value: string; label: string }) => (
-  <div>
-    <div className="text-2xl md:text-3xl font-bold">{value}</div>
-    <div className="text-xs uppercase tracking-wider text-primary-foreground/70">{label}</div>
+const Stat = ({ value, label, delay }: { value: string; label: string; delay: string }) => (
+  <div className="animate-fade-in-up" style={{ animationDelay: delay, animationFillMode: "backwards" }}>
+    <div className="font-display text-3xl md:text-4xl font-bold text-gradient">{value}</div>
+    <div className="text-[10px] uppercase tracking-[0.2em] text-white/50 mt-1">{label}</div>
   </div>
 );
 
-const Card = ({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) => (
-  <div className="bg-white/10 backdrop-blur border border-white/20 rounded-xl p-5 hover:bg-white/15 transition">
-    <div className="h-10 w-10 rounded-lg bg-white/20 grid place-items-center mb-3">{icon}</div>
-    <div className="font-semibold mb-1">{title}</div>
-    <div className="text-xs text-primary-foreground/80">{desc}</div>
+const Card = ({ icon, title, desc, delay }: { icon: React.ReactNode; title: string; desc: string; delay: string }) => (
+  <div
+    className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-primary-glow/50 transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
+    style={{ animationDelay: delay, animationFillMode: "backwards" }}
+  >
+    <div className="h-11 w-11 rounded-xl gradient-accent grid place-items-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 text-primary-foreground">
+      {icon}
+    </div>
+    <div className="font-semibold mb-1 text-white">{title}</div>
+    <div className="text-xs text-white/60">{desc}</div>
   </div>
 );

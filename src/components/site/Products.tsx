@@ -53,34 +53,48 @@ const products = [
 ];
 
 export const Products = () => (
-  <section id="products" className="py-16 md:py-24">
-    <div className="container">
-      <div className="flex flex-wrap items-end justify-between gap-4 mb-10">
+  <section id="products" className="relative py-20 md:py-32 bg-secondary/30 overflow-hidden">
+    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
+    <div className="container relative">
+      <div className="flex flex-wrap items-end justify-between gap-4 mb-14 animate-fade-in-up">
         <div>
-          <span className="text-xs font-bold uppercase tracking-widest text-primary">Our Products</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">Browse our product range</h2>
+          <span className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-primary-glow mb-4">— Our Products</span>
+          <h2 className="font-display text-3xl md:text-5xl font-bold mt-2 leading-tight">
+            Browse our <span className="text-gradient">product range</span>
+          </h2>
         </div>
-        <Button variant="outline" asChild><a href="#contact">View Complete Range <ArrowRight className="ml-1 h-4 w-4" /></a></Button>
+        <Button variant="outline" asChild className="group hover:border-primary-glow hover:text-primary-glow transition-all">
+          <a href="#contact">View Complete Range <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" /></a>
+        </Button>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {products.map((p) => (
-          <article key={p.name} className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/40 transition">
+        {products.map((p, i) => (
+          <article
+            key={p.name}
+            className="group relative bg-card border border-border rounded-2xl overflow-hidden hover-lift animate-fade-in-up"
+            style={{ animationDelay: `${i * 0.06}s`, animationFillMode: "backwards" }}
+          >
             <div className="relative aspect-square bg-secondary overflow-hidden">
-              <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-semibold px-2 py-1 rounded">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+              <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <span className="absolute top-3 left-3 z-20 gradient-accent text-primary-foreground text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
                 {p.count}+ items
               </span>
             </div>
             <div className="p-5">
-              <h3 className="font-bold text-lg mb-3 group-hover:text-primary transition">{p.name}</h3>
-              <ul className="space-y-1.5 mb-4">
+              <h3 className="font-display font-bold text-lg mb-3 group-hover:text-primary-glow transition-colors">{p.name}</h3>
+              <ul className="space-y-1.5 mb-5">
                 {p.items.map((i) => (
-                  <li key={i} className="text-xs text-muted-foreground line-clamp-1">• {i}</li>
+                  <li key={i} className="text-xs text-muted-foreground line-clamp-1 flex items-start gap-1.5">
+                    <span className="text-primary-glow mt-0.5">›</span>{i}
+                  </li>
                 ))}
               </ul>
               <div className="flex gap-2">
-                <Button size="sm" className="flex-1" asChild><a href="#contact">Get Quote</a></Button>
+                <Button size="sm" className="flex-1 group/btn" asChild>
+                  <a href="#contact">Get Quote <ArrowRight className="ml-1 h-3 w-3 group-hover/btn:translate-x-0.5 transition-transform" /></a>
+                </Button>
                 <Button size="sm" variant="outline" asChild><a href="#contact">View</a></Button>
               </div>
             </div>

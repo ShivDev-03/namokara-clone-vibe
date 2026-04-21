@@ -25,11 +25,11 @@ export const Header = () => {
       <div className="gradient-hero text-white text-xs">
         <div className="container flex flex-wrap items-center justify-between gap-2 py-2">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary-glow" /> Shakarpur, New Delhi</span>
-            <span className="hidden sm:flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-primary-glow" /> GST: 07AFDPJ4894B1ZJ</span>
+            <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary-glow" /> Vadodara, Gujarat — India</span>
+            {/* <span className="hidden sm:flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-primary-glow" /> GST: 07AFDPJ4894B1ZJ</span> */}
           </div>
           <div className="flex items-center gap-3">
-            <a href="tel:+917942835440" className="flex items-center gap-1.5 hover:text-primary-glow transition-colors"><Phone className="h-3.5 w-3.5" /> +91-79428 35440</a>
+            <a href="tel:+917942835440" className="flex items-center gap-1.5 hover:text-primary-glow transition-colors"><Phone className="h-3.5 w-3.5" /> +91-8140048117</a>
           </div>
         </div>
       </div>
@@ -37,13 +37,13 @@ export const Header = () => {
       {/* Main bar */}
       <div className="container flex items-center justify-between py-4">
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="relative h-12 w-12 rounded-xl gradient-hero text-white grid place-items-center font-display font-black text-lg shadow-elegant group-hover:shadow-glow transition-all duration-500 overflow-hidden">
-            <span className="relative z-10">NE</span>
-            <div className="absolute inset-0 gradient-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          </div>
+          <img
+            src="/pwr-logo.png"
+            alt="PWR Power Solution logo"
+            className="h-12 w-auto object-contain"
+          />
           <div className="leading-tight">
-            <div className="font-display text-lg sm:text-xl font-bold text-foreground">Namokar Enterprises</div>
-            <div className="text-[11px] sm:text-xs text-muted-foreground tracking-[0.2em] uppercase">& Automation</div>
+            <div className="font-display text-lg sm:text-xl font-bold text-foreground">PWR Power Solution</div>
           </div>
         </a>
 

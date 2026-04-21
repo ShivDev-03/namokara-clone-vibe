@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const facts = [
-  { icon: Briefcase, label: "Nature of Business", value: "Trader - Wholesaler/Distributor" },
+  { icon: Briefcase, label: "Nature of Buisness", value: "Manufacture and wholesaler" },
   { icon: Users, label: "Employees", value: "Up to 10 People" },
-  { icon: Calendar, label: "GST Registration", value: "09-12-2022" },
-  { icon: Scale, label: "Legal Status", value: "Proprietorship" },
+  // { icon: Calendar, label: "GST Registration", value: "09-12-2022" },
+  // { icon: Scale, label: "Legal Status", value: "Proprietorship" },
   { icon: TrendingUp, label: "Annual Turnover", value: "₹ 1.5 - 5 Cr" },
-  { icon: Globe, label: "Import Export Code", value: "AFDPJ4894B" },
-  { icon: FileText, label: "GST No.", value: "07AFDPJ4894B1ZJ" },
+  // { icon: Globe, label: "Import Export Code", value: "AFDPJ4894B" },
+  // { icon: FileText, label: "GST No.", value: "07AFDPJ4894B1ZJ" },
 ];
 
 export const About = () => (
@@ -22,17 +22,18 @@ export const About = () => (
           Your trusted partner in <span className="text-gradient">industrial automation</span>
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed">
-          Established in <strong className="text-foreground">2020</strong>, Namokar Enterprises & Automation is a leading
-          <strong className="text-foreground"> wholesale trader</strong> of Rotary Encoders, Incremental Encoders, Electric MCBs,
-          SMPS, Sensors and other automation components. We deliver authentic products from globally recognised brands across India.
+          Established in <strong className="text-foreground">2021</strong>, PWR Power Solution is a leading
+          <strong className="text-foreground"> manufacturer and wholesaler</strong> of Solid State Relays.
+          Our offered range includes DC to AC, AC to AC, and DC to DC relays. We deliver authentic
+          products from globally recognized brands across India.
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="flex flex-wrap justify-start gap-4">
         {facts.map(({ icon: Icon, label, value }, i) => (
           <div
             key={label}
-            className="group relative bg-card border border-border rounded-2xl p-6 hover-lift overflow-hidden animate-fade-in-up"
+            className="group relative w-full max-w-[280px] bg-card border border-border rounded-2xl p-6 hover-lift overflow-hidden animate-fade-in-up"
             style={{ animationDelay: `${i * 0.08}s`, animationFillMode: "backwards" }}
           >
             <div className="absolute inset-0 gradient-accent opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
@@ -47,7 +48,7 @@ export const About = () => (
         ))}
       </div>
 
-      <div className="mt-12 flex justify-center animate-fade-in-up">
+      <div className="mt-12 flex justify-start animate-fade-in-up">
         <Button asChild size="lg" className="group shadow-elegant hover:shadow-glow transition-all duration-500">
           <a href="#contact">Contact Us <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" /></a>
         </Button>

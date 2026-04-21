@@ -34,15 +34,15 @@ export const Contact = () => {
           </p>
 
           <div className="space-y-3">
-            <Info icon={<MapPin className="h-5 w-5" />} title="Address" value="Shakarpur, New Delhi, Delhi — India" />
-            <Info icon={<Phone className="h-5 w-5" />} title="Call Us" value="+91-79428 35440" href="tel:+917942835440" />
-            <Info icon={<Mail className="h-5 w-5" />} title="Email" value="enquiry@namokarenterprises.co.in" href="mailto:enquiry@namokarenterprises.co.in" />
+            <Info icon={<MapPin className="h-5 w-5" />} title="Address" value="Vadodara, Gujarat — India" />
+            <Info icon={<Phone className="h-5 w-5" />} title="Call Us" value="+91-8140048117" href="tel:+91-8140048117" />
+            <Info icon={<Mail className="h-5 w-5" />} title="Email" value="pwr.powersolutions@gmail.com" href="mailto:pwr.powersolutions@gmail.com" />
           </div>
 
           <div className="mt-8 p-6 bg-card border border-border rounded-2xl relative overflow-hidden group">
             <div className="absolute inset-0 gradient-accent opacity-5" />
             <div className="relative">
-              <div className="text-2xl font-display font-bold text-gradient mb-1">85%</div>
+              <div className="text-2xl font-display font-bold text-gradient mb-1">100%</div>
               <div className="text-sm font-semibold mb-1">Response Rate</div>
               <div className="text-xs text-muted-foreground">Fast replies during business hours.</div>
             </div>

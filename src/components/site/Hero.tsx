@@ -17,14 +17,14 @@ export const Hero = () => {
 
       <div className="container relative py-20 md:py-28 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
         <div className="animate-fade-in-up">
-          <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs font-medium mb-6 animate-scale-in">
+          {/* <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs font-medium mb-6 animate-scale-in">
             <Sparkles className="h-3.5 w-3.5 text-primary-glow" /> Verified Wholesale Trader · Since 2020
-          </span>
+          </span> */}
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
-            Industrial <span className="text-gradient">Encoders</span>, Sensors & Automation
+            Industrial <span className="text-gradient">SSR</span>, For Automation
           </h1>
           <p className="text-base md:text-lg text-white/70 mb-10 max-w-xl leading-relaxed">
-            Authorized wholesale distributor of Tamagawa, Autonics, Heidenhain, Omron, Kübler, Meanwell and more — serving industries across India.
+            Authorized manufacturer and wholesaler of (PWR Power Solution) SSRs - serving industries across India.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild size="lg" className="bg-primary-glow hover:bg-primary-glow/90 text-primary-foreground shadow-glow hover:scale-105 transition-all duration-300">

@@ -8,11 +8,19 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Namokar Enterprises & Automation | Encoders, Sensors, SMPS";
-    const meta = document.querySelector('meta[name="description"]') || (() => {
-      const m = document.createElement("meta"); m.setAttribute("name", "description"); document.head.appendChild(m); return m;
-    })();
-    meta.setAttribute("content", "Wholesale trader of Rotary & Incremental Encoders, Sensors, Meanwell SMPS, Limit Switches and automation components — Tamagawa, Autonics, Heidenhain, Omron, Kübler.");
+    document.title = "PWR Power Solution | Encoders, Sensors, SMPS";
+    const meta =
+      document.querySelector('meta[name="description"]') ||
+      (() => {
+        const m = document.createElement("meta");
+        m.setAttribute("name", "description");
+        document.head.appendChild(m);
+        return m;
+      })();
+    meta.setAttribute(
+      "content",
+      "Wholesale trader of Rotary & Incremental Encoders, Sensors, Meanwell SMPS, Limit Switches and automation components — Tamagawa, Autonics, Heidenhain, Omron, Kübler.",
+    );
   }, []);
 
   return (

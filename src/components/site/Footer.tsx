@@ -52,7 +52,7 @@ export const Footer = () => (
     <div className="border-t border-white/10 relative">
       <div className="container py-5 text-xs flex flex-wrap justify-between gap-2 opacity-60">
         <div>© {new Date().getFullYear()} PWR Power Solution. All rights reserved.</div>
-        <div>GST: 07AFDPJ4894B1ZJ · IEC: AFDPJ4894B</div>
+        {/*<div>GST: 07AFDPJ4894B1ZJ · IEC: AFDPJ4894B</div>*/}
       </div>
     </div>
   </footer>

@@ -42,7 +42,7 @@ export const Header = () => {
             alt="PWR Power Solution logo"
             className="h-12 w-auto object-contain"
           />
-          <div className="leading-tight">
+          <div className="hidden sm:block leading-tight">
             <div className="font-display text-lg sm:text-xl font-bold text-foreground">PWR Power Solution</div>
           </div>
         </a>

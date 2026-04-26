@@ -7,7 +7,7 @@ const facts = [
   { icon: Users, label: "Employees", value: "Up to 10 People" },
   // { icon: Calendar, label: "GST Registration", value: "09-12-2022" },
   // { icon: Scale, label: "Legal Status", value: "Proprietorship" },
-  { icon: TrendingUp, label: "Annual Turnover", value: "₹ 50 L - 2 Cr" },
+  // { icon: TrendingUp, label: "Annual Turnover", value: "₹ 50 L - 2 Cr" },
   // { icon: Globe, label: "Import Export Code", value: "AFDPJ4894B" },
   // { icon: FileText, label: "GST No.", value: "07AFDPJ4894B1ZJ" },
 ];

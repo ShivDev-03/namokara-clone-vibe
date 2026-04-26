@@ -23,7 +23,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { cn } from "@/lib/utils";
 import type { AdminProductListItem } from "@/types/adminProduct";
 
-const MAX_FILE_BYTES = 5 * 1024 * 1024;
+const MAX_FILE_BYTES = 20 * 1024 * 1024;
 
 const buildProductFormSchema = (isEdit: boolean) =>
   z
@@ -41,7 +41,7 @@ const buildProductFormSchema = (isEdit: boolean) =>
             ctx.addIssue({ code: "custom", path: ["image"], message: "File must be an image" });
           }
           if (data.image.size > MAX_FILE_BYTES) {
-            ctx.addIssue({ code: "custom", path: ["image"], message: "Image must be 5MB or smaller" });
+            ctx.addIssue({ code: "custom", path: ["image"], message: "Image must be 20MB or smaller" });
           }
         }
         return;
@@ -54,7 +54,7 @@ const buildProductFormSchema = (isEdit: boolean) =>
         ctx.addIssue({ code: "custom", path: ["image"], message: "File must be an image" });
       }
       if (data.image.size > MAX_FILE_BYTES) {
-        ctx.addIssue({ code: "custom", path: ["image"], message: "Image must be 5MB or smaller" });
+        ctx.addIssue({ code: "custom", path: ["image"], message: "Image must be 20MB or smaller" });
       }
     });
 

@@ -17,7 +17,7 @@ export const Footer = () => (
             <div className="font-display font-bold">PWR Power Solution</div>
           </div>
         </div>
-        <p className="text-sm opacity-70 leading-relaxed">Manufacturer and wholesaler of Solid State Relays since 2021.</p>
+        <p className="text-sm opacity-70 leading-relaxed">Manufacturer and wholesaler of Solid State Relays since 2024.</p>
       </div>
 
       <div>

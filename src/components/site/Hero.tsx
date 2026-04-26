@@ -36,20 +36,20 @@ export const Hero = () => {
           </div>
 
           <div className="mt-12 grid grid-cols-3 gap-4 max-w-md">
-            <Stat value="600+" label="SKUs" delay="0.2s" />
-            <Stat value="1.5–5 Cr" label="Turnover" delay="0.35s" />
+            {/*<Stat value="600+" label="SKUs" delay="0.2s" />*/}
+            {/*<Stat value="1.5–5 Cr" label="Turnover" delay="0.35s" />*/}
             <Stat value="100%" label="Genuine" delay="0.5s" />
           </div>
         </div>
 
         <div className="relative animate-slide-in-right">
           <div className="absolute inset-0 gradient-glow blur-2xl" />
-          <div className="relative grid grid-cols-2 gap-4">
-            <Card icon={<Factory className="h-6 w-6" />} title="Trusted Brands" desc="Tamagawa · Autonics · Omron" delay="0.1s" />
-            <Card icon={<Truck className="h-6 w-6" />} title="Pan-India Shipping" desc="Fast, insured delivery" delay="0.25s" />
-            <Card icon={<BadgeCheck className="h-6 w-6" />} title="GST Verified" desc="07AFDPJ4894B1ZJ" delay="0.4s" />
-            <Card icon={<ArrowRight className="h-6 w-6" />} title="Quick Quotes" desc="Reply within hours" delay="0.55s" />
-          </div>
+          {/*<div className="relative grid grid-cols-2 gap-4">*/}
+            {/*<Card icon={<Factory className="h-6 w-6" />} title="Trusted Brands" desc="Tamagawa · Autonics · Omron" delay="0.1s" />*/}
+            {/*<Card icon={<Truck className="h-6 w-6" />} title="Pan-India Shipping" desc="Fast, insured delivery" delay="0.25s" />*/}
+            {/*<Card icon={<BadgeCheck className="h-6 w-6" />} title="GST Verified" desc="07AFDPJ4894B1ZJ" delay="0.4s" />*/}
+            {/*<Card icon={<ArrowRight className="h-6 w-6" />} title="Quick Quotes" desc="Reply within hours" delay="0.55s" />*/}
+          {/*</div>*/}
         </div>
       </div>
     </section>
